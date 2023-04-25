@@ -1,13 +1,15 @@
-name: tbasis_set
-description: A starting point for Dart libraries or applications.
+name: basisbase
+description: >-
+  A Dart database and library for atom-centered basis functions used in
+  computational and quantum chemistry.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/bingao/basisbase
 
 environment:
   sdk: '>=2.19.6 <3.0.0'
 
-# dependencies:
-#   path: ^1.8.0
+dependencies:
+  http: ^0.13.5
 
 dev_dependencies:
   lints: ^2.0.0

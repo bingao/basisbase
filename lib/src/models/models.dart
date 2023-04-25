@@ -1,1 +1,1 @@
-export 'basis_set_info.dart';
+export 'gaussian_type_orbital.dart';
