@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:http/http.dart' as http;
 
-//import 'models/models.dart';
+import 'models/models.dart';
 import 'errors.dart';
 
 /// The base URL for querying basis sets
@@ -43,8 +43,7 @@ class BasisSetExchange {
     //return _decodeBasisNames(response.body);
   }
 
-  //Future<List<GaussianTypeOrbital>> getBasis(String name, {
-  void getBasis(String name, {
+  Future<BseBasisSet> getBasis(String name, {
     String? elements,
     int? version,
     bool uncontractGeneral = false,
@@ -76,7 +75,7 @@ class BasisSetExchange {
     final basisJson = jsonDecode(response.body) as Map<String, dynamic>;
     if (basisJson.isEmpty) throw BasisSetNotFoundFailure();
     print(basisJson);
-    //return GaussianTypeOrbital.fromJson(basisJson);
+    return BseBasisSet.fromJson(basisJson);
   }
 
   //Future<String> getBasisFamily(String name) async {
